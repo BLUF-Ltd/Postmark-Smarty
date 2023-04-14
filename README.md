@@ -42,7 +42,7 @@ The files are organised into a few top-level folders here, but in a fully workin
 As well as the [Smarty templating engine](https://github.com/smarty-php), this system also relies upon the [PostMark client library](https://github.com/ActiveCampaign/postmark-php).
 
 #### common
-This is our main postmark library, containing the sendBLUFtransactional function, which may be called from elsewhere in the site after requiring 'core/postmark.php' 
+This is our main postmark library, containing the sendBLUFtransactional function, which may be called from elsewhere in the site after requiring 'common/postmark.php' 
 
 #### language
 This is the folder defined as $smarty->config_dir, and contains the postmark_texts.txt file used to provide transalations for the site templates.
