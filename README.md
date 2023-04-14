@@ -39,7 +39,7 @@ This snippet shows how it's done.
 ### What's here
 The files are organised into a few top-level folders here, but in a fully working implementation, you'd need to move them to appropriate places, based on your Smarty configuration. The files in the PostMark server are designed to be cut and pasted into their template editor. (You would also probably need to edit the wrappers, like headers and footers; PostMark has some pretty clever stuff, and you can evn have email that switch between light and dark modes).
 
-As well as the [Smarty templating engine](https://github.com/smarty-php), this system also relies upon the [PostMark client library](https://github.com/ActiveCampaign/postmark-php)/
+As well as the [Smarty templating engine](https://github.com/smarty-php), this system also relies upon the [PostMark client library](https://github.com/ActiveCampaign/postmark-php).
 
 #### common
 This is our main postmark library, containing the sendBLUFtransactional function, which may be called from elsewhere in the site after requiring 'core/postmark.php' 
