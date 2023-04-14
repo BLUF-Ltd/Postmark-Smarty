@@ -27,7 +27,7 @@ In the second instance, the value of the $memberid variable will be inserted int
 This has proven a reliable way of managing our email templates over the years. However, when we switched from our previous email provider to [Postmark](https://postmarkapp.com), we had to do a bit of work.
 
 PostMark has their own templating system, but it's not quite enough for what we wanted to do. There doesn't appear to be an easy way to 
-have multiple languages, and it looked as if we would have to create multiple template on the PostMark system, for each of our emails. That would quickly become a nightmare to manage. Plus, we already have tools of our own to handle the automation of translations, and generation of langauge files for Smarty, and didn't want to end up with a separate way of managing emails vs the rest of the site.
+have multiple languages, and it looked as if we would have to create multiple templates on the PostMark system, for each of our emails. That would quickly become a nightmare to manage. Plus, we already have tools of our own to handle the automation of translations, and generation of langauge files for Smarty, and didn't want to end up with a separate way of managing emails vs the rest of the site.
 
 ### The solution
 Our solution was to take advantage of the fact that you can pass an array of JSON data to the PostMark API, which will be interpreted by their templating engine to create the final email. Normally, we use Smarty in our template to generate HTML pages, but it doesn't have to do that. Why not use Smarty to generate JSON instead?
