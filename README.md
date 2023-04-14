@@ -95,3 +95,4 @@ The end result may perhaps not be the most elegant way of sending multiple langu
 The image below shows an example application email - the logo is included via the template wrapper on the PostMark server.
 
 
+![A BLUF application email as received via PostMark](/applicationemail.png "A BLUF application email as received via PostMark")
