@@ -1,0 +1,22 @@
+{{header}}
+
+{{#each body}}
+{{line}}
+{{/each}}
+
+{{#each button}}
+
+{{#text}}{{.}} ( {{../link}} ){{/text}}
+
+{{/each}}
+
+{{#each lower}}
+{{line}}
+{{/each}}
+
+{{signoff}},
+{{signed}}
+
+{{#each blacklist}}
+{{text}}  {{link}}
+{{/each}}
