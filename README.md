@@ -47,7 +47,7 @@ This is our main postmark library, containing the sendBLUFtransactional function
 #### language
 This is the folder defined as $smarty->config_dir, and contains the postmark_texts.txt file used to provide transalations for the site templates.
 
-#### postmark
+#### postmark
 This would normally be a subdirectory of $smarty->template_dir and contains the Smarty templates that generate JSON. For each local template named ABC there is a corresponding file json-ABC.tpl. For example, when we send the 'accept' template, the file json-accept.tpl is used to create the JSON for PostMark.
 
 Three templates are provided in this example:
