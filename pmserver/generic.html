@@ -1,0 +1,56 @@
+<h1 class="align-center">{{subject}}</h1>
+<h3>{{header}}</h3>
+
+{{#each body}}
+<p>{{{line}}}</p>
+{{/each}}
+
+
+{{#each button}}
+<!-- Action -->
+<table class="body-action" align="center" width="100%" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center">
+      <!-- Border based button https://litmus.com/blog/a-guide-to-bulletproof-buttons-in-email-design -->
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td align="center">
+            <table border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td>
+                  {{#text}}<a href="{{../link}}" class="button button--blue" target="_blank">{{.}}</a>{{/text}}
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+{{/each}}
+
+{{#each lower}}
+<p>{{{line}}}</p>
+{{/each}}
+
+{{signoff}}<br/>{{signed}}
+
+{{#each button}}
+<!-- Sub copy -->
+<table class="body-sub">
+  <tr>
+    <td>
+      <p class="sub">{{button_problem}}</p>
+      <p class="sub">{{link}}</p>
+    </td>
+  </tr>
+</table>
+{{/each}}
+
+{{#each blacklist}}
+<p class="sub"><a href="{{link}}">{{text}}</a></p>
+{{/each}}
+
+
+
