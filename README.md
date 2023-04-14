@@ -52,11 +52,11 @@ This would normally be a subdirectory of $smarty->template_dir and contains the 
 
 Three templates are provided in this example:
 + accept is used when a new member is accepted, and includes a call to action button
-+ application is send when the application process starts, to confirm an email, and includes a call to action as well as a 'blacklist' link that stops anyone trying to enroll the same address again
++ application is sent when the application process starts, to confirm an email, and includes a call to action as well as a 'blacklist' link that stops anyone trying to enroll the same address again
 + delete is sent when an account is deleted, and contains neither call to action, nor blacklist links
 
 #### pmserver
-The files in this folder are the text of our template created on the PostMark system, and stored with the name generic-transaction. The system allows for slightly different text and HTML formats, and so we've included both here.
+The files in this folder are the text of our template created on the PostMark system, and stored there with the name generic-transaction. The system allows for slightly different text and HTML formats, and so we've included both here.
 
 Not included are our constant definitions, or the KEYSpostmark.php file, which is where our PostMark API keys are stored (well away from the site document root, or anything managed by Git)
 
@@ -68,7 +68,7 @@ To send a transactional message we just call sendBLUFtransactional:
     sendBLUFtransactional($address, $language, $template, $data, $application = false, $reply = false)
     
 $address is the email address
-$language is the language code; this must match the name of a section in the config file postmark_texts.txt; we use two letter code like en, de, fr and es
+$language is the language code; this must match the name of a section in the config file postmark_texts.txt; we use two letter codes like en, de, fr and es
 $template is the local template name to use, like 'application','accept' or 'delete' and selects which JSON template to load
 $data is an array of variables that will be substituted into the JSON template
 $application is boolean; when true, we use the application server, otherwise we use the main server
