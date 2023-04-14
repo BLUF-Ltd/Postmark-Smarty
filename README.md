@@ -74,7 +74,7 @@ $data is an array of variables that will be substituted into the JSON template
 $application is boolean; when true, we use the application server, otherwise we use the main server
 $reply if set, is used to create a unique mailbox hash for the reply-to field, like inbox+ABCDE@feedback.bluf.com to allow replies to be routed correctly via PostMark's [inbound message processing](https://postmarkapp.com/inbound-email).
 
-#### Detailed example
+#### Functional example
 This is the code we use when starting a new member application. 
 
 + $email is the email entered into our systems, after a Captcha challenge.
@@ -91,3 +91,7 @@ So, looking at the template json-application.tpl in the postmark folder, you can
 The end result is the JSON data that our function passes to PostMark. For details about their templates, refer to the PostMark documentation, but it's fairly straightforward - where our template sets items such as button or blacklist to null, they're omitted from the email.
 
 The end result may perhaps not be the most elegant way of sending multiple language emails, but it does mean that there is only one template to maintain on PostMark, and all the other work, including templates and translations, is handled using the same tools as the rest of our website.
+
+The image below shows an example application email - the logo is included via the template wrapper on the PostMark server.
+
+
